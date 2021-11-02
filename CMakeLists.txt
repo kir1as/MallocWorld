@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.20)
+project(malloc_world C)
+
+set(CMAKE_C_STANDARD 99)
+
+add_executable(malloc_world main.c sources/game.c sources/initialization.c sources/prototypes.h sources/define.h sources/menu.c sources/newGame.c sources/display.c sources/structures.h sources/newGame.h sources/initialization.h sources/game.h sources/npc.c sources/npc.h sources/respawn.c sources/respawn.h)

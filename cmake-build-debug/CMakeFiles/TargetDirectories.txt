@@ -1,0 +1,3 @@
+/Users/lin/CLionProjects/3a/malloc_world/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/lin/CLionProjects/3a/malloc_world/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/lin/CLionProjects/3a/malloc_world/cmake-build-debug/CMakeFiles/malloc_world.dir
