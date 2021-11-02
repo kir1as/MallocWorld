@@ -38,3 +38,10 @@ void displayPlayer(Player *player){
                player->inventory[i].quantity,player->inventory[i].durability);
     }
 }
+
+void printLinkedList(RespawnCase* head){
+    if(head != NULL){
+        printf("------------\n counter : %d\n i : %d\n j : %d\n value : %d\n------------\n",head->counter,head->rowIndex,head->columnIndex,head->value);
+        printLinkedList(head->next);
+    }
+}
