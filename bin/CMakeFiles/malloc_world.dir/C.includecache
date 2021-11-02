@@ -19,12 +19,16 @@ stdio.h
 -
 string.h
 -
+stdlib.h
+-
 prototypes.h
 /Users/lin/CLionProjects/3a/malloc_world/sources/prototypes.h
 define.h
 /Users/lin/CLionProjects/3a/malloc_world/sources/define.h
 npc.h
 /Users/lin/CLionProjects/3a/malloc_world/sources/npc.h
+game.h
+/Users/lin/CLionProjects/3a/malloc_world/sources/game.h
 
 /Users/lin/CLionProjects/3a/malloc_world/sources/game.h
 
@@ -67,6 +71,12 @@ prototypes.h
 /Users/lin/CLionProjects/3a/malloc_world/sources/prototypes.h
 structures.h
 /Users/lin/CLionProjects/3a/malloc_world/sources/structures.h
+
+/Users/lin/CLionProjects/3a/malloc_world/sources/respawn.c
+respawn.h
+/Users/lin/CLionProjects/3a/malloc_world/sources/respawn.h
+
+/Users/lin/CLionProjects/3a/malloc_world/sources/respawn.h
 
 /Users/lin/CLionProjects/3a/malloc_world/sources/structures.h
 

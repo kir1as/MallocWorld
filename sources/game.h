@@ -32,10 +32,24 @@ void findPlayerSurrounding(char **map, int rows, int column, int actualZone, int
 //Permet de recuperer le menu du heros
 void getGameMenu(int *zqsd,int actualZone,Map* map1,Map* map2,Map* map3);
 
-void shiftCase(Map* map, int upDown, int leftRight);
+void shiftCase(Map* map, int upDown, int leftRight, int value);
 
 void getAction(Map* map, int value, int upDown,int leftRight, Player* player, int* swapZone);
+
+void freeLinkedList(RespawnCase* head);
+
+ListRespawnCase* initListRespawnCase(char *menu);
+
+void appendRespawnCase(RespawnCase* head, RespawnCase* last);
+
+RespawnCase* newRespawnCase(int nbRespawnTime, int rowIndex, int columnIndex, int value);
+
+void respawnObject(RespawnCase* head, char** map);
 
 Map* getActualMap(Map* map1, Map* map2, Map* map3, int actualZone);
 //Fonction qui appel le jeu
 void game(Map* map1,Map* map2,Map* map3, Player* player);
+
+void exitPortal(Map* map,int portal,ListRespawnCase* list);
+
+void shiftZone(int* actualZone, int* swapZone, Map* map1, Map* map2, Map* map3, int upDown,int leftRight, ListRespawnCase* list);

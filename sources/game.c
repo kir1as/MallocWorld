@@ -4,9 +4,11 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include "prototypes.h"
 #include "define.h"
 #include "npc.h"
+#include "game.h"
 
 void cleanStdin(void){
     int c = 0;
@@ -246,25 +248,58 @@ void getGameMenu(int *zqsd,int actualZone,Map* map1,Map* map2,Map* map3){
     }
 }
 
-void shiftCase(Map* map, int upDown, int leftRight){
+void shiftCase(Map* map, int upDown, int leftRight, int value){
     int i = 0;
     int j = 0;
     for( i = 0 ; i< map->row ; i++){
         for( j = 0 ; j < map->column ; j++){
             if(map->map[i][j] == 1){
                 map->map[i][j] = 0;
-                map->map[i+upDown][j+leftRight] = 1;
+                map->map[i+upDown][j+leftRight] = value;
                 return;
             }
         }
     }
 }
 
-//void shiftZone(int* actualZone, int* swapZone){
-//    if(){
-//
-//    }
-//}
+void exitPortal(Map* map,int portal,ListRespawnCase* list){
+    int i = 0;
+    int j = 0;
+    for( i = 0 ; i< map->row ; i++){
+        for( j = 0 ; j < map->column ; j++){
+            if(map->map[i][j] == portal){
+                map->map[i][j] = 1;
+                appendRespawnCase(list->first, newRespawnCase(1, i, j, portal));
+                return;
+            }
+        }
+    }
+}
+
+void shiftZone(int* actualZone, int* swapZone, Map* map1, Map* map2, Map* map3, int upDown,int leftRight, ListRespawnCase* list){
+    if(*swapZone == 1){
+        if(*actualZone == 1){
+            shiftCase(map1, upDown, leftRight, -2);
+            *actualZone = 2;
+            exitPortal(map2, -2, list);
+        }else{
+            shiftCase(map2, upDown, leftRight, -2);
+            *actualZone = 1;
+            exitPortal(map1, -2, list);
+        }
+    }else if(*swapZone == 2){
+        if(*actualZone == 2){
+            shiftCase(map2, upDown, leftRight, -3);
+            *actualZone = 3;
+            exitPortal(map2, -3, list);
+        }else{
+            shiftCase(map3, upDown, leftRight, -3);
+            *actualZone = 2;
+            exitPortal(map3, -3, list);
+        }
+    }
+    *swapZone = 0;
+}
 
 void getAction(Map* map, int value, int upDown,int leftRight, Player* player, int* swapZone){
     if(value == -99){
@@ -276,7 +311,7 @@ void getAction(Map* map, int value, int upDown,int leftRight, Player* player, in
     }else if(value == -1){
         printf("Tu ne peux pas marcher sur cette case!\n");
     }else if(value == 0){
-        shiftCase(map,upDown,leftRight); //Code du deplacement
+        shiftCase(map,upDown,leftRight,1); //Code du deplacement
     }else if(value == 2){
         npcMenu(player); //Code du menu du PNG
     }else if(value == 3 || value == 6 || value == 9){
@@ -302,11 +337,75 @@ Map* getActualMap(Map* map1, Map* map2, Map* map3, int actualZone){
     }
 }
 
+void freeLinkedList(RespawnCase* head){
+    if(head != NULL){
+        freeLinkedList(head->next);
+        free(head);
+    }
+}
+
+ListRespawnCase* initListRespawnCase(char *menu){
+    ListRespawnCase* list = malloc(sizeof(ListRespawnCase));
+    RespawnCase* element = malloc(sizeof(RespawnCase));
+
+    if (list == NULL || element == NULL){
+        printf("Erreur création de la liste chainee des RespawnCase\n");
+        *menu = 'm';
+        return NULL;
+    }
+
+    element->counter = -1;
+    element->rowIndex = -1;
+    element->columnIndex = -1;
+    element->value = NULL_CASE;
+    element->next = NULL;
+    list->first = element;
+
+    return list;
+}
+
+void appendRespawnCase(RespawnCase* head, RespawnCase* last){
+    while(head->next != NULL){
+        head = head->next;
+    }
+    head->next = last;
+}
+
+RespawnCase* newRespawnCase(int nbRespawnTime, int rowIndex, int columnIndex, int value){
+    RespawnCase* e = malloc(sizeof(RespawnCase));
+    e->counter = nbRespawnTime;
+    e->rowIndex = rowIndex;
+    e->columnIndex = columnIndex;
+    e->value = value;
+    e->next = NULL;
+    return e;
+}
+//faire une fonction prennant un chiffre qui va permettre de retrouver la structure a enlever.
+
+
+void respawnObject(RespawnCase* head, char** map){
+    if(head != NULL){
+        respawnObject(head->next, map);
+        if( (head->counter) - 1 == 0){
+            if(map[(head->rowIndex)][(head->columnIndex)] != 1){
+                map[(head->rowIndex)][(head->columnIndex)] = head->value;
+                if(head->next == NULL){
+
+                }
+            }
+        }
+    }
+}
+
 void game(Map* map1,Map* map2,Map* map3, Player* player){
     int actualZone = getZone(map1,map2);
     int zqsd[4]={0};
     char menu = -1;
     int swapZone = 0;
+    ListRespawnCase * list = initListRespawnCase(&menu);
+    int upDown = 0;
+    int leftRight = 0;
+
     while(menu != 'm'){
         displayActualMap(map1,map2,map3,actualZone);
         printf("actualZone : %d\n",actualZone);
@@ -318,12 +417,20 @@ void game(Map* map1,Map* map2,Map* map3, Player* player){
 
         switch(menu){
             case 122: getAction(getActualMap(map1, map2, map3, actualZone), zqsd[0], -1, 0, player, &swapZone);// 122 == 'z'
+                upDown = -1;
+                leftRight = 0;
                 break;
             case 113: getAction(getActualMap(map1, map2, map3, actualZone), zqsd[1], 0, -1, player, &swapZone);// 113 == 'q'
+                upDown = 0;
+                leftRight = -1;
                 break;
             case 115: getAction(getActualMap(map1, map2, map3, actualZone), zqsd[2], 1, 0, player, &swapZone);// 115 == 's'
+                upDown = 1;
+                leftRight = 0;
                 break;
             case 100: getAction(getActualMap(map1, map2, map3, actualZone), zqsd[3], 0, 1, player, &swapZone);// 100 == 'd'
+                upDown = 0;
+                leftRight = 1;
                 break;
             case 105: ;// 105 == 'i'
                 break;
@@ -332,6 +439,12 @@ void game(Map* map1,Map* map2,Map* map3, Player* player){
             case 109: break;// 109 == 'm'
             default: printf("Touche non attribué !\n");
         }
-
+        if(swapZone != 0){
+            shiftZone(&actualZone, &swapZone, map1, map2, map3, upDown, leftRight ,list);
+        }
+        printLinkedList(list->first);
+        respawnObject(list->first,getActualMap(map1, map2, map3, actualZone)->map);
     }
+    freeLinkedList(list->first);
+    free(list);
 }

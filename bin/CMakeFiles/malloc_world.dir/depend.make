@@ -8,6 +8,7 @@ CMakeFiles/malloc_world.dir/sources/display.c.o: \
 CMakeFiles/malloc_world.dir/sources/game.c.o: \
  ../sources/define.h \
  ../sources/game.c \
+ ../sources/game.h \
  ../sources/npc.h \
  ../sources/prototypes.h \
  ../sources/structures.h
@@ -30,3 +31,6 @@ CMakeFiles/malloc_world.dir/sources/npc.c.o: \
  ../sources/npc.c \
  ../sources/prototypes.h \
  ../sources/structures.h
+CMakeFiles/malloc_world.dir/sources/respawn.c.o: \
+ ../sources/respawn.c \
+ ../sources/respawn.h
