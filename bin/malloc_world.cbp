@@ -93,6 +93,12 @@
 		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/game.h">
 			<Option target="malloc_world"/>
 		</Unit>
+		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/harvest.c">
+			<Option target="malloc_world"/>
+		</Unit>
+		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/harvest.h">
+			<Option target="malloc_world"/>
+		</Unit>
 		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/initialization.c">
 			<Option target="malloc_world"/>
 		</Unit>

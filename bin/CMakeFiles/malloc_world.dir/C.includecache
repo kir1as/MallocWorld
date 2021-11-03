@@ -8,12 +8,6 @@
 
 /Users/lin/CLionProjects/3a/malloc_world/sources/define.h
 
-/Users/lin/CLionProjects/3a/malloc_world/sources/display.c
-stdio.h
--
-prototypes.h
-/Users/lin/CLionProjects/3a/malloc_world/sources/prototypes.h
-
 /Users/lin/CLionProjects/3a/malloc_world/sources/game.c
 stdio.h
 -
@@ -27,54 +21,30 @@ define.h
 /Users/lin/CLionProjects/3a/malloc_world/sources/define.h
 npc.h
 /Users/lin/CLionProjects/3a/malloc_world/sources/npc.h
-game.h
-/Users/lin/CLionProjects/3a/malloc_world/sources/game.h
+respawn.h
+/Users/lin/CLionProjects/3a/malloc_world/sources/respawn.h
+harvest.h
+/Users/lin/CLionProjects/3a/malloc_world/sources/harvest.h
 
-/Users/lin/CLionProjects/3a/malloc_world/sources/game.h
-
-/Users/lin/CLionProjects/3a/malloc_world/sources/initialization.c
+/Users/lin/CLionProjects/3a/malloc_world/sources/harvest.c
 stdio.h
--
-string.h
 -
 stdlib.h
 -
-initialization.h
-/Users/lin/CLionProjects/3a/malloc_world/sources/initialization.h
-game.h
-/Users/lin/CLionProjects/3a/malloc_world/sources/game.h
-
-/Users/lin/CLionProjects/3a/malloc_world/sources/initialization.h
-prototypes.h
-/Users/lin/CLionProjects/3a/malloc_world/sources/prototypes.h
-
-/Users/lin/CLionProjects/3a/malloc_world/sources/menu.c
-stdio.h
+time.h
 -
-string.h
--
-newGame.h
-/Users/lin/CLionProjects/3a/malloc_world/sources/newGame.h
-initialization.h
-/Users/lin/CLionProjects/3a/malloc_world/sources/initialization.h
+structures.h
+/Users/lin/CLionProjects/3a/malloc_world/sources/structures.h
+respawn.h
+/Users/lin/CLionProjects/3a/malloc_world/sources/respawn.h
 
-/Users/lin/CLionProjects/3a/malloc_world/sources/newGame.h
-
-/Users/lin/CLionProjects/3a/malloc_world/sources/npc.c
-stdio.h
--
-prototypes.h
-/Users/lin/CLionProjects/3a/malloc_world/sources/prototypes.h
+/Users/lin/CLionProjects/3a/malloc_world/sources/harvest.h
 
 /Users/lin/CLionProjects/3a/malloc_world/sources/npc.h
 
 /Users/lin/CLionProjects/3a/malloc_world/sources/prototypes.h
 structures.h
 /Users/lin/CLionProjects/3a/malloc_world/sources/structures.h
-
-/Users/lin/CLionProjects/3a/malloc_world/sources/respawn.c
-respawn.h
-/Users/lin/CLionProjects/3a/malloc_world/sources/respawn.h
 
 /Users/lin/CLionProjects/3a/malloc_world/sources/respawn.h
 

@@ -9,9 +9,14 @@ CMakeFiles/malloc_world.dir/sources/display.c.o
 CMakeFiles/malloc_world.dir/sources/game.c.o
  /Users/lin/CLionProjects/3a/malloc_world/sources/define.h
  /Users/lin/CLionProjects/3a/malloc_world/sources/game.c
- /Users/lin/CLionProjects/3a/malloc_world/sources/game.h
+ /Users/lin/CLionProjects/3a/malloc_world/sources/harvest.h
  /Users/lin/CLionProjects/3a/malloc_world/sources/npc.h
  /Users/lin/CLionProjects/3a/malloc_world/sources/prototypes.h
+ /Users/lin/CLionProjects/3a/malloc_world/sources/respawn.h
+ /Users/lin/CLionProjects/3a/malloc_world/sources/structures.h
+CMakeFiles/malloc_world.dir/sources/harvest.c.o
+ /Users/lin/CLionProjects/3a/malloc_world/sources/harvest.c
+ /Users/lin/CLionProjects/3a/malloc_world/sources/respawn.h
  /Users/lin/CLionProjects/3a/malloc_world/sources/structures.h
 CMakeFiles/malloc_world.dir/sources/initialization.c.o
  /Users/lin/CLionProjects/3a/malloc_world/sources/game.h
@@ -33,5 +38,7 @@ CMakeFiles/malloc_world.dir/sources/npc.c.o
  /Users/lin/CLionProjects/3a/malloc_world/sources/prototypes.h
  /Users/lin/CLionProjects/3a/malloc_world/sources/structures.h
 CMakeFiles/malloc_world.dir/sources/respawn.c.o
+ /Users/lin/CLionProjects/3a/malloc_world/sources/define.h
  /Users/lin/CLionProjects/3a/malloc_world/sources/respawn.c
  /Users/lin/CLionProjects/3a/malloc_world/sources/respawn.h
+ /Users/lin/CLionProjects/3a/malloc_world/sources/structures.h

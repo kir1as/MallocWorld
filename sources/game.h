@@ -34,17 +34,7 @@ void getGameMenu(int *zqsd,int actualZone,Map* map1,Map* map2,Map* map3);
 
 void shiftCase(Map* map, int upDown, int leftRight, int value);
 
-void getAction(Map* map, int value, int upDown,int leftRight, Player* player, int* swapZone);
-
-void freeLinkedList(RespawnCase* head);
-
-ListRespawnCase* initListRespawnCase(char *menu);
-
-void appendRespawnCase(RespawnCase* head, RespawnCase* last);
-
-RespawnCase* newRespawnCase(int nbRespawnTime, int rowIndex, int columnIndex, int value);
-
-void respawnObject(RespawnCase* head, char** map);
+void getAction(Map* map, ListRespawnCase* list, int value, int upDown,int leftRight, Player* player, int* swapZone);
 
 Map* getActualMap(Map* map1, Map* map2, Map* map3, int actualZone);
 //Fonction qui appel le jeu

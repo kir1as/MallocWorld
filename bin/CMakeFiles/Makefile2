@@ -81,12 +81,12 @@ clean: CMakeFiles/malloc_world.dir/clean
 CMakeFiles/malloc_world.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lin/CLionProjects/3a/malloc_world/bin/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target malloc_world"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lin/CLionProjects/3a/malloc_world/bin/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target malloc_world"
 .PHONY : CMakeFiles/malloc_world.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/malloc_world.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lin/CLionProjects/3a/malloc_world/bin/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lin/CLionProjects/3a/malloc_world/bin/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/malloc_world.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lin/CLionProjects/3a/malloc_world/bin/CMakeFiles 0
 .PHONY : CMakeFiles/malloc_world.dir/rule

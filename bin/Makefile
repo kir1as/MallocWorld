@@ -201,6 +201,30 @@ sources/game.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/game.c.s
 .PHONY : sources/game.c.s
 
+sources/harvest.o: sources/harvest.c.o
+.PHONY : sources/harvest.o
+
+# target to build an object file
+sources/harvest.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/harvest.c.o
+.PHONY : sources/harvest.c.o
+
+sources/harvest.i: sources/harvest.c.i
+.PHONY : sources/harvest.i
+
+# target to preprocess a source file
+sources/harvest.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/harvest.c.i
+.PHONY : sources/harvest.c.i
+
+sources/harvest.s: sources/harvest.c.s
+.PHONY : sources/harvest.s
+
+# target to generate assembly for a file
+sources/harvest.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/harvest.c.s
+.PHONY : sources/harvest.c.s
+
 sources/initialization.o: sources/initialization.c.o
 .PHONY : sources/initialization.o
 
@@ -339,6 +363,9 @@ help:
 	@echo "... sources/game.o"
 	@echo "... sources/game.i"
 	@echo "... sources/game.s"
+	@echo "... sources/harvest.o"
+	@echo "... sources/harvest.i"
+	@echo "... sources/harvest.s"
 	@echo "... sources/initialization.o"
 	@echo "... sources/initialization.i"
 	@echo "... sources/initialization.s"
