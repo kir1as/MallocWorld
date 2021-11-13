@@ -108,7 +108,7 @@ void retrievePlayer(Player *player){
         return;
     }
 
-    while(fgets(line,255,fp) != NULL && strcmp(line, "-- STORAGE --\n") != 0){
+    while(fgets(line,255,fp) != NULL && strcmp(line, "-- STORAGE --\n") != 0 && strcmp(line, "-- STORAGE --") != 0){
         if(strcmp(line,"=== PLAYER ===\n")==0){
             fgets(line,255,fp);
             player->level = atoi(line+1);
@@ -146,6 +146,7 @@ void continueGame(void){
     Map* map1 = malloc(sizeof(Map));
     Map* map2 = malloc(sizeof(Map));
     Map* map3 = malloc(sizeof(Map));
+    int gameValue = 0;
     retrieveMap(map1,1);
     // printf("column continueGame: %d\n",map1->column);
     // printf("rows continueGame: %d\n",map1->row);
@@ -160,8 +161,14 @@ void continueGame(void){
                 //displayMap(map3);
                 retrievePlayer(player);
                 //displayPlayer(player);
-                game(map1, map2, map3, player);
+                gameValue = game(map1, map2, map3, player);
+                if(gameValue == -1){
+                    if(remove("save.txt") != 0){
+                        printf("Erreur sur la suppresion du fichier save.txt!\n");
+                    }
+                }else{
 
+                }
                 freeTwoDimensionArray(map3->map,map3->row);
             }
             freeTwoDimensionArray(map2->map,map2->row);

@@ -31,15 +31,22 @@ void fillMenuAll(char **map, int i, int j, int pCase, int* zqsd);
 void findPlayerSurrounding(char **map, int rows, int column, int actualZone, int* zqsd);
 //Permet de recuperer le menu du heros
 void getGameMenu(int *zqsd,int actualZone,Map* map1,Map* map2,Map* map3);
-
+//Permet de changer la valeur de la case du deplacement du hero
 void shiftCase(Map* map, int upDown, int leftRight, int value);
-
-void getAction(Map* map, ListRespawnCase* list, int value, int upDown,int leftRight, Player* player, int* swapZone);
-
-Map* getActualMap(Map* map1, Map* map2, Map* map3, int actualZone);
-//Fonction qui appel le jeu
-void game(Map* map1,Map* map2,Map* map3, Player* player);
-
+//Permet de changer le portail par le heros lors d'un passage a une nouvelle zone
+//le portail est donc un objet a respawn
 void exitPortal(Map* map,int portal,ListRespawnCase* list);
-
+//Permet le passage entre deux zone du jeu et de verifier si le joueur ne se trouve pas sur une case
+//a respawn
 void shiftZone(int* actualZone, int* swapZone, Map* map1, Map* map2, Map* map3, int upDown,int leftRight, ListRespawnCase* list);
+//Permet de lancer une fonction par rapport a l'action declencher par le deplacement du heros
+//ou par le choix du joueur
+int getAction(Map* map, ListRespawnCase* list, int value, int upDown,int leftRight, Player* player, int* swapZone);
+//Permet de recuperer la map actif
+Map* getActualMap(Map* map1, Map* map2, Map* map3, int actualZone);
+//Fonction qui fait office de menu du joueur
+int game(Map* map1,Map* map2,Map* map3, Player* player);
+
+
+
+

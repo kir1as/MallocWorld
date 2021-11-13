@@ -7,9 +7,12 @@
 #include <stdlib.h>
 #include "prototypes.h"
 #include "define.h"
+#include "game.h"
 #include "npc.h"
 #include "respawn.h"
 #include "harvest.h"
+#include "battle.h"
+#include "save.h"
 
 void cleanStdin(void){
     int c = 0;
@@ -85,6 +88,7 @@ char *getTextFromMap(int value, int actualZone) {
     } else if (value == 99) {
         return "Affronter le Boss Final";
     }
+    return "";
 }
 
 
@@ -278,6 +282,13 @@ void exitPortal(Map* map,int portal,ListRespawnCase* list){
 }
 
 void shiftZone(int* actualZone, int* swapZone, Map* map1, Map* map2, Map* map3, int upDown,int leftRight, ListRespawnCase* list){
+    int countMax = verifyPlayerBeforeRespawn(list->first->next, getActualMap(map1, map2, map3, *actualZone)->map );
+    if( countMax == -1){
+        printf("Vous ne pouvez pas aller dans la prochaine zone à partir de cette case!\n");
+        *swapZone = 0;
+        return;
+    }
+    respawnAllObject(list->first,getActualMap(map1, map2, map3, *actualZone)->map,countMax);
     if(*swapZone == 1){
         if(*actualZone == 1){
             shiftCase(map1, upDown, leftRight, -2);
@@ -302,13 +313,22 @@ void shiftZone(int* actualZone, int* swapZone, Map* map1, Map* map2, Map* map3, 
     *swapZone = 0;
 }
 
-void getAction(Map* map, ListRespawnCase* list, int value, int upDown,int leftRight, Player* player, int* swapZone){
+int getAction(Map* map, ListRespawnCase* list, int value, int upDown,int leftRight, Player* player, int* swapZone){
+    int battleValue = 0;
     if(value == -99){
         printf("Tu ne peux pas marcher hors de la zone!\n");
     }else if(value == -3){
-        *swapZone = 2;
+        if(player->level >= 7){
+            *swapZone = 2;
+        }else{
+            printf("Niveau trop faible pour utiliser le portail!\n");
+        }
     }else if(value == -2){
-        *swapZone = 1;
+        if(player->level >= 3){
+            *swapZone = 1;
+        }else{
+            printf("Niveau trop faible pour utiliser le portail!\n");
+        }
     }else if(value == -1){
         printf("Tu ne peux pas marcher sur cette case!\n");
     }else if(value == 0){
@@ -322,10 +342,16 @@ void getAction(Map* map, ListRespawnCase* list, int value, int upDown,int leftRi
     }else if(value == 5 || value == 8 || value == 11){
         harvest(map, player, list, value, upDown, leftRight);//Code du recolte de bois
     }else if(value >= 12 && value <= 98){
-        //Code de combat
+        battleValue = battle(player, value);
+        if(battleValue == 1){
+            monsterCase(list, map, upDown, leftRight, value);
+        }else if(battleValue == -1){
+            return -1;
+        };//Code de combat
     }else if(value == 99){
         //Code du combat contre le boss
     }
+    return 0;
 }
 
 Map* getActualMap(Map* map1, Map* map2, Map* map3, int actualZone){
@@ -338,7 +364,7 @@ Map* getActualMap(Map* map1, Map* map2, Map* map3, int actualZone){
     }
 }
 
-void game(Map* map1,Map* map2,Map* map3, Player* player){
+int game(Map* map1,Map* map2,Map* map3, Player* player){
     int actualZone = getZone(map1,map2);
     int zqsd[4]={0};
     char menu = -1;
@@ -346,6 +372,7 @@ void game(Map* map1,Map* map2,Map* map3, Player* player){
     ListRespawnCase * list = initListRespawnCase(&menu);
     int upDown = 0;
     int leftRight = 0;
+    int getActionValue = 0;
 
     while(menu != 'm'){
         displayActualMap(map1,map2,map3,actualZone);
@@ -353,32 +380,35 @@ void game(Map* map1,Map* map2,Map* map3, Player* player){
         getGameMenu(zqsd, actualZone, map1, map2, map3);
         printf("z = %d, q = %d, s = %d, d = %d\n",zqsd[0],zqsd[1],zqsd[2],zqsd[3]);
         printf("Entrer : ");
-        cleanStdin();
         scanf("%c",&menu);
+        cleanStdin();
 
         switch(menu){
-            case 122: getAction(getActualMap(map1, map2, map3, actualZone), list, zqsd[0], -1, 0, player, &swapZone);// 122 == 'z'
+            case 122: getActionValue = getAction(getActualMap(map1, map2, map3, actualZone), list, zqsd[0], -1, 0, player, &swapZone);// 122 == 'z'
                 upDown = -1;
                 leftRight = 0;
                 break;
-            case 113: getAction(getActualMap(map1, map2, map3, actualZone), list,zqsd[1], 0, -1, player, &swapZone);// 113 == 'q'
+            case 113: getActionValue = getAction(getActualMap(map1, map2, map3, actualZone), list,zqsd[1], 0, -1, player, &swapZone);// 113 == 'q'
                 upDown = 0;
                 leftRight = -1;
                 break;
-            case 115: getAction(getActualMap(map1, map2, map3, actualZone), list,zqsd[2], 1, 0, player, &swapZone);// 115 == 's'
+            case 115: getActionValue = getAction(getActualMap(map1, map2, map3, actualZone), list,zqsd[2], 1, 0, player, &swapZone);// 115 == 's'
                 upDown = 1;
                 leftRight = 0;
                 break;
-            case 100: getAction(getActualMap(map1, map2, map3, actualZone), list,zqsd[3], 0, 1, player, &swapZone);// 100 == 'd'
+            case 100: getActionValue = getAction(getActualMap(map1, map2, map3, actualZone), list,zqsd[3], 0, 1, player, &swapZone);// 100 == 'd'
                 upDown = 0;
                 leftRight = 1;
                 break;
             case 105: displayPlayer(player) ;// 105 == 'i'
                 break;
-            case 112: ;// 112 == 'p'
+            case 112: saveGame(map1, map2, map3, player, list, actualZone);// 112 == 'p'
                 break;
             case 109: break;// 109 == 'm'
             default: printf("Touche non attribué !\n");
+        }
+        if(getActionValue == -1){
+            return -1;
         }
         if(swapZone != 0){
             shiftZone(&actualZone, &swapZone, map1, map2, map3, upDown, leftRight ,list);
@@ -390,4 +420,5 @@ void game(Map* map1,Map* map2,Map* map3, Player* player){
     }
     freeLinkedList(list->first);
     free(list);
+    return 0;
 }

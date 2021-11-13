@@ -81,6 +81,12 @@
 		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/main.c">
 			<Option target="malloc_world"/>
 		</Unit>
+		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/battle.c">
+			<Option target="malloc_world"/>
+		</Unit>
+		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/battle.h">
+			<Option target="malloc_world"/>
+		</Unit>
 		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/define.h">
 			<Option target="malloc_world"/>
 		</Unit>
@@ -127,6 +133,12 @@
 			<Option target="malloc_world"/>
 		</Unit>
 		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/respawn.h">
+			<Option target="malloc_world"/>
+		</Unit>
+		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/save.c">
+			<Option target="malloc_world"/>
+		</Unit>
+		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/save.h">
 			<Option target="malloc_world"/>
 		</Unit>
 		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/structures.h">

@@ -21,4 +21,4 @@ void putPlayerNpcPortal(int zone,int map[][10]);
 //Permet de mettre un boss sur une map
 void putBoss(int map[][10]);
 //Permet de creer une nouvelle partie en creant une nouvelle sauvegarde
-void newGame();
+void newGame(void);

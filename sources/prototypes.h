@@ -21,4 +21,5 @@ void displayActualMap(Map* map1,Map* map2,Map* map3, int actualZone);
 void cleanStdin(void);
 //Permet d'afficher une liste chainee
 void printLinkedList(RespawnCase* head);
-
+//Permet de recuperer le nombre d'exp qu'il faut pour chaque niveau
+int getExpMax(Player *player);

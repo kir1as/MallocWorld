@@ -8,12 +8,13 @@
 #include "newGame.h"
 
 int randomMonster(int zone){
+    srand( time( NULL ) + rand()%100 );
     if(zone == 1){
-        return (rand()%28)+12;
+        return (rand()%28)+12; //12-39
     }else if(zone == 2){
-        return (rand()%28)+40;
+        return (rand()%28)+40; //40-67
     }else{
-        return (rand()%31)+68;
+        return (rand()%31)+68; //68-98
     }
 }
 
@@ -117,7 +118,7 @@ void putBoss(int map[][10]){
     }
 }
 
-void newGame(){
+void newGame(void){
     int map1[10][10];
     int map2[10][10];
     int map3[10][10];

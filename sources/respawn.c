@@ -52,7 +52,6 @@ RespawnCase* newRespawnCase(int nbRespawnTime, int rowIndex, int columnIndex, in
     return e;
 }
 
-//faire une fonction prennant un chiffre qui va permettre de retrouver la structure a enlever.
 void deleteElement(RespawnCase* head,int index){
     RespawnCase* tmp;
     if(head != NULL){
@@ -78,5 +77,26 @@ void respawnObject(RespawnCase* head, char** map, int counter, RespawnCase* firs
         }else if(head->value != NULL_CASE && head->counter != 1){
             head->counter -= 1;
         }
+    }
+}
+
+int verifyPlayerBeforeRespawn(RespawnCase* head, char** map){
+    int countMax = 0;
+    while(head != NULL){
+        if(map[(head->rowIndex)][(head->columnIndex)] == 1){
+            return -1;
+        }
+        if(head->counter > countMax){
+            countMax = head->counter;
+        }
+        head = head->next;
+    }
+    return countMax;
+}
+
+void respawnAllObject(RespawnCase* head, char** map, int turn){
+    int i = 0;
+    for( i = 0 ; i < turn ; i++ ){
+        respawnObject(head,map, 0, head);
     }
 }

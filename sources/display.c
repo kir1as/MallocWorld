@@ -28,10 +28,29 @@ void displayActualMap(Map* map1,Map* map2,Map* map3, int actualZone){
     }
 }
 
+int getExpMax(Player *player){
+    int i = 0;
+    int j = 0;
+    for( i = 1 ; i <= 10 ; i++){
+        if(player->level == i){
+            return 100+j;
+        }
+        if( i <= 3 ){
+            j += 50;
+        }else if( i<=7 ){
+            j += 150;
+        }else{
+            j += 2000;
+        }
+    }
+    return 0;
+}
+
 void displayPlayer(Player *player){
     int i = 0;
-    printf("--- PLAYER STATS ---\nlevel : %d\nexp :%d/\nhp : %d/%d\n"
-           "--------------------\n",player->level,player->exps,player->hpNow,player->hpMax);
+    printf("--- PLAYER STATS ---\nlevel : %d\nexp :%d/%d\nhp : %d/%d\n"
+           "--------------------\n",player->level,player->exps, getExpMax(player),
+           player->hpNow,player->hpMax);
     printf("--- INVENTORY ---\n");
     for( i = 0 ; i < 10 ; i++ ){
         printf("id : %2d, quantity : x%02d, durability : %3d\n",player->inventory[i].id,

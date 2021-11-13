@@ -153,6 +153,30 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/main.c.s
 .PHONY : main.c.s
 
+sources/battle.o: sources/battle.c.o
+.PHONY : sources/battle.o
+
+# target to build an object file
+sources/battle.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/battle.c.o
+.PHONY : sources/battle.c.o
+
+sources/battle.i: sources/battle.c.i
+.PHONY : sources/battle.i
+
+# target to preprocess a source file
+sources/battle.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/battle.c.i
+.PHONY : sources/battle.c.i
+
+sources/battle.s: sources/battle.c.s
+.PHONY : sources/battle.s
+
+# target to generate assembly for a file
+sources/battle.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/battle.c.s
+.PHONY : sources/battle.c.s
+
 sources/display.o: sources/display.c.o
 .PHONY : sources/display.o
 
@@ -345,6 +369,30 @@ sources/respawn.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/respawn.c.s
 .PHONY : sources/respawn.c.s
 
+sources/save.o: sources/save.c.o
+.PHONY : sources/save.o
+
+# target to build an object file
+sources/save.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/save.c.o
+.PHONY : sources/save.c.o
+
+sources/save.i: sources/save.c.i
+.PHONY : sources/save.i
+
+# target to preprocess a source file
+sources/save.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/save.c.i
+.PHONY : sources/save.c.i
+
+sources/save.s: sources/save.c.s
+.PHONY : sources/save.s
+
+# target to generate assembly for a file
+sources/save.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/save.c.s
+.PHONY : sources/save.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -357,6 +405,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... sources/battle.o"
+	@echo "... sources/battle.i"
+	@echo "... sources/battle.s"
 	@echo "... sources/display.o"
 	@echo "... sources/display.i"
 	@echo "... sources/display.s"
@@ -381,6 +432,9 @@ help:
 	@echo "... sources/respawn.o"
 	@echo "... sources/respawn.i"
 	@echo "... sources/respawn.s"
+	@echo "... sources/save.o"
+	@echo "... sources/save.i"
+	@echo "... sources/save.s"
 .PHONY : help
 
 

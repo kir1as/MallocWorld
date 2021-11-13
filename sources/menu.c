@@ -20,16 +20,13 @@ void getMenu(void){
             strcpy(menuMessage,"Bienvenue C  Malloc World !\n 1 - Nouvelle partie\n 2 - Continuer\n 3 - Quitter\nEntrer : ");
             firstMessage = 0;
         }
+
         printf("%s",menuMessage);
         scanf ("%d", &menu);
+        cleanStdin();
 
         switch(menu){
             case 1: newGame();
-                // newPlayer(player);
-                // printf("\nplayer hp on main %d\n",player->hpNow);
-                // retrieveMap(map1,map2,map3);
-                //
-                // loadGame();
                 break;
             case 2: if(firstMessage==1){
                     menu = 3;
@@ -37,6 +34,8 @@ void getMenu(void){
                     continueGame();
                 }
                 break;
+            case 3: break;
+            default: printf("Entrez une touche valide!!!\n");
         }
     }
 }

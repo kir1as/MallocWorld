@@ -12,7 +12,7 @@
 typedef struct Item{
     int id;
     int quantity;
-    char* name;
+    char name[30];
     int durability;
 }Item;
 
@@ -41,3 +41,11 @@ typedef struct RespawnCase{
 typedef struct ListRespawnCase{
     RespawnCase* first;
 }ListRespawnCase;
+
+typedef struct Monster{
+    int id;
+    char name[30];
+    int hp;
+    int damage;
+    int exps;
+}Monster;
