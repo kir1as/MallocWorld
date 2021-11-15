@@ -5,7 +5,12 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "prototypes.h"
+
+void clear_screen(void){
+    system("clear||clr");
+}
 
 void displayMap(Map* map){
     int i = 0 ;

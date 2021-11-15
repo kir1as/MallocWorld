@@ -24,7 +24,7 @@ void getMenu(void){
         printf("%s",menuMessage);
         scanf ("%d", &menu);
         cleanStdin();
-
+        clear_screen();
         switch(menu){
             case 1: newGame();
                 break;

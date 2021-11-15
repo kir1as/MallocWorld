@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include "newGame.h"
+#include "define.h"
 
 int randomMonster(int zone){
     srand( time( NULL ) + rand()%100 );
@@ -130,7 +131,7 @@ void newGame(void){
     generateMap(3,map3);
     putPlayerNpcPortal(3,map3);
     putBoss(map3);
-    FILE *fp = fopen("save.txt","w+");
+    FILE *fp = fopen(SAVE_FILE_PATHNAME,"w+");
     if(fp != NULL){
         fputs("=== MAP ===\n-- ZONE 1 --\n",fp);
         for( i = 0 ; i < 10 ; i++){

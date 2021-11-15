@@ -28,6 +28,7 @@ CMakeFiles/malloc_world.dir/sources/harvest.c.o: \
  ../sources/respawn.h \
  ../sources/structures.h
 CMakeFiles/malloc_world.dir/sources/initialization.c.o: \
+ ../sources/define.h \
  ../sources/game.h \
  ../sources/initialization.c \
  ../sources/initialization.h \
@@ -40,6 +41,7 @@ CMakeFiles/malloc_world.dir/sources/menu.c.o: \
  ../sources/prototypes.h \
  ../sources/structures.h
 CMakeFiles/malloc_world.dir/sources/newGame.c.o: \
+ ../sources/define.h \
  ../sources/newGame.c \
  ../sources/newGame.h
 CMakeFiles/malloc_world.dir/sources/npc.c.o: \
@@ -52,6 +54,7 @@ CMakeFiles/malloc_world.dir/sources/respawn.c.o: \
  ../sources/respawn.h \
  ../sources/structures.h
 CMakeFiles/malloc_world.dir/sources/save.c.o: \
+ ../sources/define.h \
  ../sources/game.h \
  ../sources/prototypes.h \
  ../sources/respawn.h \

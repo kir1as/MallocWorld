@@ -23,3 +23,7 @@ void cleanStdin(void);
 void printLinkedList(RespawnCase* head);
 //Permet de recuperer le nombre d'exp qu'il faut pour chaque niveau
 int getExpMax(Player *player);
+//Permet d'eregistrer dans un fichier les erreurs passer en parametre
+void errorLog(const char* txt);
+//Permet de clear l'ecran du terminal
+void clear_screen(void);

@@ -48,19 +48,19 @@ int getZone(Map* map1,Map* map2){
 int particularCase(int i, int j, int rows, int column){
     if( i == 0 && j == 0 ){
         return 1;
-    }else if( i == 0 && j == column){
+    }else if( i == 0 && j == column-1){
         return 2;
-    }else if( i == rows && j == 0 ){
+    }else if( i == rows-1 && j == 0 ){
         return 3;
-    }else if( i == rows && j == column ){
+    }else if( i == rows-1 && j == column-1 ){
         return 4;
     }else if(i == 0){
         return 5;
-    }else if(i == rows){
+    }else if(i == rows-1){
         return 6;
     }else if(j == 0){
         return 7;
-    }else if(j == column){
+    }else if(j == column-1){
         return 8;
     }
     return 0;
@@ -80,7 +80,7 @@ char *getTextFromMap(int value, int actualZone) {
     } else if (value == 3 + (actualZone - 1) * 3) {
         return "Couper la plante";
     } else if (value == 4 + (actualZone - 1) * 3) {
-        return "Miner la roche";
+        return "Miner le rocher";
     } else if (value == 5 + (actualZone - 1) * 3) {
         return "Abattre l'arbre";
     } else if (value >= 12 && value <= 98) {
@@ -94,66 +94,60 @@ char *getTextFromMap(int value, int actualZone) {
 
 
 void printPlayerMenuCorner(int pCase,int value1, int value2, int actualZone){
-    char displayMenu[200] = "--- MENU ---\n z : ";
+    char displayMenu[200] = "--- MENU ---\n";
+    if(pCase == 1 || pCase == 2){
+        strcat(displayMenu," s : ");
+    }else{
+        strcat(displayMenu," z : ");
+    }
+    strcat(displayMenu,getTextFromMap(value1,actualZone));
     if(pCase == 1){
-        strcat(displayMenu,getTextFromMap(value1,actualZone));
-        strcat(displayMenu," en bas\n q : ");
-        strcat(displayMenu,getTextFromMap(value2,actualZone));
-        strcat(displayMenu," à droite\n");
+        strcat(displayMenu," en bas\n d : ");
     }else if(pCase == 2){
-        strcat(displayMenu,getTextFromMap(value1,actualZone));
         strcat(displayMenu," en bas\n q : ");
-        strcat(displayMenu,getTextFromMap(value2,actualZone));
-        strcat(displayMenu," à gauche\n d : ");
     }else if(pCase == 3){
-        strcat(displayMenu,getTextFromMap(value1,actualZone));
-        strcat(displayMenu," en haut\n s : ");
-        strcat(displayMenu,getTextFromMap(value2,actualZone));
+        strcat(displayMenu," en haut\n d : ");
+    }else{
+        strcat(displayMenu," en haut\n q : ");
+    }
+    strcat(displayMenu,getTextFromMap(value2,actualZone));
+    if(pCase == 1 || pCase == 3){
         strcat(displayMenu," à droite\n");
     }else{
-        strcat(displayMenu,getTextFromMap(value1,actualZone));
-        strcat(displayMenu," en haut\n s : ");
-        strcat(displayMenu,getTextFromMap(value2,actualZone));
-        strcat(displayMenu," à gauche\n d : ");
+        strcat(displayMenu," à gauche\n");
     }
     printf("%s",displayMenu);
     printf(" i : Inventaire\n p : Sauvegarder\n m : Retour au menu principal\n------------\n");
 }
 
-void getStringPlayerMenu(char*  string1, char* string2, char* string3, char* string4,char* string5,char* string6){
-
-}
-
 void printPlayerMenuBorder(int pCase,int value1, int value2, int value3, int actualZone){
-    char displayMenu[200] = "--- MENU ---\n z : ";
+    char displayMenu[200] = "--- MENU ---\n";
     if(pCase == 5){
-        strcat(displayMenu,getTextFromMap(value1,actualZone));
-        strcat(displayMenu," en bas\n q : ");
-        strcat(displayMenu,getTextFromMap(value2,actualZone));
-        strcat(displayMenu," à gauche\n d : ");
-        strcat(displayMenu,getTextFromMap(value3,actualZone));
-        strcat(displayMenu," à droite\n");
-    }else if(pCase == 6){
-        strcat(displayMenu,getTextFromMap(value1,actualZone));
-        strcat(displayMenu," en haut\n s : ");
-        strcat(displayMenu,getTextFromMap(value2,actualZone));
-        strcat(displayMenu," à gauche\n d : ");
-        strcat(displayMenu,getTextFromMap(value3,actualZone));
-        strcat(displayMenu," à droite\n");
-    }else if(pCase == 7){
-        strcat(displayMenu,getTextFromMap(value1,actualZone));
-        strcat(displayMenu," en haut\n s : ");
-        strcat(displayMenu,getTextFromMap(value2,actualZone));
-        strcat(displayMenu," en bas\n q : ");
-        strcat(displayMenu,getTextFromMap(value3,actualZone));
-        strcat(displayMenu," à droite\n");
+        strcat(displayMenu," s : ");
     }else{
-        strcat(displayMenu,getTextFromMap(value1,actualZone));
-        strcat(displayMenu," en haut\n s : ");
-        strcat(displayMenu,getTextFromMap(value2,actualZone));
+        strcat(displayMenu," z : ");
+    }
+    strcat(displayMenu,getTextFromMap(value1,actualZone));
+    if(pCase == 5){
         strcat(displayMenu," en bas\n q : ");
-        strcat(displayMenu,getTextFromMap(value3,actualZone));
+    }else if(pCase == 6){
+        strcat(displayMenu," en haut\n q : ");
+    }else if(pCase == 7 || pCase == 8){
+        strcat(displayMenu," en haut\n s : ");
+    }
+    strcat(displayMenu,getTextFromMap(value2,actualZone));
+    if(pCase == 5 || pCase == 6){
         strcat(displayMenu," à gauche\n d : ");
+    }else if(pCase == 7){
+        strcat(displayMenu," en bas\n d : ");
+    }else if(pCase == 8){
+        strcat(displayMenu," en bas\n q : ");
+    }
+    strcat(displayMenu,getTextFromMap(value3,actualZone));
+    if(pCase == 8){
+        strcat(displayMenu," à gauche\n d : ");
+    }else{
+        strcat(displayMenu," à droite\n");
     }
     printf("%s",displayMenu);
     printf(" i : Inventaire\n p : Sauvegarder\n m : Retour au menu principal\n------------\n");
@@ -209,7 +203,6 @@ void findPlayerSurrounding(char **map, int rows, int column, int actualZone, int
     for( i = 0 ; i < rows ; i++ ){
         for( j = 0 ; j < column ; j++ ){
             if(map[i][j] == 1){
-                printf("player se trouve dans la case map[%d][%d]\n",i,j);
                 pCase = particularCase(i,j,rows,column);
                 switch(pCase){
                     case 1: printPlayerMenuCorner(pCase,map[i+1][j],map[i][j+1],actualZone); //Corner haut/gauche
@@ -224,9 +217,9 @@ void findPlayerSurrounding(char **map, int rows, int column, int actualZone, int
                         break;
                     case 6: printPlayerMenuBorder(pCase,map[i-1][j],map[i][j-1],map[i][j+1],actualZone); //Bordure bas
                         break;
-                    case 7: printPlayerMenuBorder(pCase,map[i+1][j],map[i-1][j],map[i][j+1],actualZone); //Bordure gauche
+                    case 7: printPlayerMenuBorder(pCase,map[i-1][j],map[i+1][j],map[i][j+1],actualZone); //Bordure gauche
                         break;
-                    case 8: printPlayerMenuBorder(pCase,map[i+1][j],map[i-1][j],map[i][j-1],actualZone); //Bordure droite
+                    case 8: printPlayerMenuBorder(pCase,map[i-1][j],map[i+1][j],map[i][j-1],actualZone); //Bordure droite
                         break;
                     default: printPlayerMenu(map[i-1][j],map[i+1][j],map[i][j-1],map[i][j+1],actualZone);
                 }
@@ -238,12 +231,6 @@ void findPlayerSurrounding(char **map, int rows, int column, int actualZone, int
 }
 
 void getGameMenu(int *zqsd,int actualZone,Map* map1,Map* map2,Map* map3){
-    // recuperer l'emplacement du personnage sur la map
-    // verifier qu il n'est pas sur l'un des bords
-    // verifier les outils et leur durabilite
-    // afficher les deplacement possible avec zqsd
-    // afficher retour au menu principal avec m
-
     if(actualZone == 1){
         findPlayerSurrounding(map1->map, map1->row, map1->column, actualZone, zqsd);
     }else if(actualZone == 2){
@@ -376,12 +363,12 @@ int game(Map* map1,Map* map2,Map* map3, Player* player){
 
     while(menu != 'm'){
         displayActualMap(map1,map2,map3,actualZone);
-        printf("actualZone : %d\n",actualZone);
         getGameMenu(zqsd, actualZone, map1, map2, map3);
         printf("z = %d, q = %d, s = %d, d = %d\n",zqsd[0],zqsd[1],zqsd[2],zqsd[3]);
         printf("Entrer : ");
         scanf("%c",&menu);
         cleanStdin();
+        clear_screen();
 
         switch(menu){
             case 122: getActionValue = getAction(getActualMap(map1, map2, map3, actualZone), list, zqsd[0], -1, 0, player, &swapZone);// 122 == 'z'
@@ -416,7 +403,7 @@ int game(Map* map1,Map* map2,Map* map3, Player* player){
         if(menu == 122 || menu == 113 || menu == 115 || menu == 100){
             respawnObject(list->first,getActualMap(map1, map2, map3, actualZone)->map, 0, list->first);
         }
-        printLinkedList(list->first);
+        //printLinkedList(list->first);
     }
     freeLinkedList(list->first);
     free(list);

@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include "initialization.h"
 #include "game.h"
+#include "define.h"
 
 void getMapDelimitation(int zone,char *startZone,char *endZone){
     if(zone == 2){
@@ -49,9 +50,9 @@ void retrieveMapSize(int zone,Map* map,int* tmpIndex){
 
     getMapDelimitation(zone,startZone,endZone);
 
-    FILE * fp = fopen("save.txt","r+");
+    FILE * fp = fopen(SAVE_FILE_PATHNAME,"r+");
     if(fp == NULL){
-        printf("fichier de sauvegarde introuvable\n");
+        printf("fichier de sauvegarde introuvable fsfsdf\n");
         return;
     }
     while(fgets(line,255,fp)!=NULL){
@@ -77,7 +78,7 @@ void retrieveMapData(int zone,int tmpIndex,Map* map){
     int j = 0;
     char *res;
 
-    FILE * fp = fopen("save.txt","r+");
+    FILE * fp = fopen(SAVE_FILE_PATHNAME,"r+");
     if(fp == NULL){
         printf("fichier de sauvegarde introuvable\n");
         return;
@@ -102,7 +103,7 @@ void retrievePlayer(Player *player){
     char line[255];
     char c = 'a';
     int i = 0;
-    FILE *fp = fopen("save.txt","r+");
+    FILE *fp = fopen(SAVE_FILE_PATHNAME,"r+");
     if(fp == NULL){
         printf("fichier de sauvegarde introuvable\n");
         return;
@@ -163,7 +164,7 @@ void continueGame(void){
                 //displayPlayer(player);
                 gameValue = game(map1, map2, map3, player);
                 if(gameValue == -1){
-                    if(remove("save.txt") != 0){
+                    if(remove(SAVE_FILE_PATHNAME) != 0){
                         printf("Erreur sur la suppresion du fichier save.txt!\n");
                     }
                 }else{

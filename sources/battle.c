@@ -214,6 +214,7 @@ int chooseWeapon(Player* player){
         printf("Entrer : ");
         scanf("%d",&weapon);
         cleanStdin();
+        clear_screen();
         weapon = verifyWeaponChoose(player, hashmapInv, weapon);
         if(weapon == -1){
             printf("Veuillez selectionner une arme dans la liste !\n");
@@ -239,12 +240,16 @@ void monsterCase( ListRespawnCase* list, Map* map, int upDown, int leftRight, in
 int battle(Player* player, int monsterId){
     Monster* monster = malloc(sizeof(Monster));
     if(monster == NULL){
-        printf("Erreur d'allocation memoire");
+        errorLog("Erreur d'allocation memoire\n");
         return -2;
     }
     int menu;
     int weaponIndex = -1;
     getMonsterData(monsterId, monster);
+    if(monster->id == -1){
+        return -2;
+    }
+
     displayMonster(monster);
     weaponIndex = chooseWeapon(player);
     if(weaponIndex == -2){
@@ -257,6 +262,7 @@ int battle(Player* player, int monsterId){
         printf("Entrer : ");
         scanf("%d",&menu);
         cleanStdin();
+        clear_screen();
         switch (menu) {
             case 1: if(playerAttack(player, monster, weaponIndex) == 1){
                         fighting = 1;
@@ -298,11 +304,11 @@ void getMonsterData(int monsterId, Monster* monster){
     int i = 0;
     char line[255];
 
-    FILE * fp = fopen("monsters.txt","r+");
+    FILE * fp = fopen(MONSTER_FILE_PATHNAME,"r+");
     if(fp == NULL){
-        printf("fichier de monstre introuvable\n");
+        errorLog("fichier de monstre introuvable\n");
         monster->id = -1;
-        return ;
+        return;
     }
     for( i = 0 ; i < monsterId - 12 ; i++ ){
         fgets(line,255,fp);

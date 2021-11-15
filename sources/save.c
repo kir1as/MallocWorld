@@ -8,12 +8,21 @@
 #include "prototypes.h"
 #include "respawn.h"
 #include "game.h"
+#include "define.h"
+
+void errorLog(const char* txt){
+    FILE *fp = fopen(ERROR_FILE_PATHNAME,"a");
+    if (fp != NULL) {
+        fprintf(fp, "%s",txt);
+    }
+    fclose(fp);
+}
 
 int storageCount(void){
     int counter = 0;
     char line[255];
 
-    FILE *fp = fopen("save.txt","r");
+    FILE *fp = fopen(SAVE_FILE_PATHNAME,"r");
     if(fp != NULL){
         fgets(line,255,fp);
         while(strcmp(line, "-- STORAGE --\n") != 0 && strcmp(line, "-- STORAGE --") != 0){
@@ -24,6 +33,7 @@ int storageCount(void){
             counter++;
         }
     }else{
+        errorLog("Erreur d'ouverture du fichier save.txt - storageCount()!\n");
         printf("ERREUR\n");
     }
     return counter;
@@ -33,7 +43,7 @@ void getStorage(char* buffer){
     int counter = 0;
     char line[255];
 
-    FILE *fp = fopen("save.txt","r");
+    FILE *fp = fopen(SAVE_FILE_PATHNAME,"r");
     if(fp != NULL){
         fgets(line,255,fp);
         while(strcmp(line, "-- STORAGE --\n") != 0 && strcmp(line, "-- STORAGE --") != 0){
@@ -50,15 +60,15 @@ void getStorage(char* buffer){
 }
 
 void renameNewFile(void){
-    if(remove("save.txt") == 0){
-        printf("remove ok!\n");
-        if(rename("save2.txt","save.txt") == 0){
-            printf("rename ok!\n");
+    if(remove(SAVE_FILE_PATHNAME) == 0){
+        errorLog("remove ok!\n");
+        if(rename("save2.txt",SAVE_FILE_PATHNAME) == 0){
+            errorLog("rename ok!\n");
         }else{
-            printf("Erreur du renommage du fichier save2.txt en save.txt!\n");
+            errorLog("Erreur du renommage du fichier save2.txt en save.txt!\n");
         }
     }else{
-        printf("Erreur sur la suppression du fichier save.txt!\n");
+        errorLog("Erreur sur la suppression du fichier save.txt!\n");
     }
 }
 
@@ -75,6 +85,7 @@ void saveGame(Map* map1,Map* map2,Map* map3, Player* player, ListRespawnCase* li
     int j = 0;
     FILE *fp = fopen("save2.txt","w+");
     if(buffer == NULL){
+        errorLog("Erreur d'allocation mémoire ! - saveGame()\n");
         printf("Erreur d'allocation mémoire!\n");
         return;
     }

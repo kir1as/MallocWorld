@@ -32,9 +32,10 @@ void npcMenu(Player* player){
         printf(" 1 - Réparer les équipements\n 2 - Retirer un objet du coffre\n 3 - Déposer un objet dans le coffre\n"
                " 4 - Crafter un objet\n 5 - Annuler\n");
         printf("Entrer :");
-        cleanStdin();
-        scanf("%d",&menu);
 
+        scanf("%d",&menu);
+        cleanStdin();
+        clear_screen();
         switch(menu){
             case 1: repairEquipment(player);
                 break;
