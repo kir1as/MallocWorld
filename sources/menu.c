@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include "define.h"
 #include "newGame.h"
 #include "initialization.h"
 
@@ -13,7 +14,7 @@ void getMenu(void){
     char menuMessage[] = "Bienvenue C  Malloc World !\n 1 - Nouvelle partie\n 2 - Continuer\n 3 - Quitter\nEntrer : ";
 
     while (menu != 3){
-        if(fopen("save.txt","r")==NULL){
+        if(fopen(SAVE_FILE_PATHNAME,"r")==NULL){
             strcpy(menuMessage,"Bienvenue C  Malloc World !\n 1 - Nouvelle partie\n 2 - Quitter\nEntrer : ");
             firstMessage = 1;
         }else{

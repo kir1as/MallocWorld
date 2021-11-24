@@ -81,6 +81,69 @@
 		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/main.c">
 			<Option target="malloc_world"/>
 		</Unit>
+		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/battle.c">
+			<Option target="malloc_world"/>
+		</Unit>
+		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/battle.h">
+			<Option target="malloc_world"/>
+		</Unit>
+		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/define.h">
+			<Option target="malloc_world"/>
+		</Unit>
+		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/display.c">
+			<Option target="malloc_world"/>
+		</Unit>
+		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/game.c">
+			<Option target="malloc_world"/>
+		</Unit>
+		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/game.h">
+			<Option target="malloc_world"/>
+		</Unit>
+		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/harvest.c">
+			<Option target="malloc_world"/>
+		</Unit>
+		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/harvest.h">
+			<Option target="malloc_world"/>
+		</Unit>
+		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/initialization.c">
+			<Option target="malloc_world"/>
+		</Unit>
+		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/initialization.h">
+			<Option target="malloc_world"/>
+		</Unit>
+		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/menu.c">
+			<Option target="malloc_world"/>
+		</Unit>
+		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/newGame.c">
+			<Option target="malloc_world"/>
+		</Unit>
+		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/newGame.h">
+			<Option target="malloc_world"/>
+		</Unit>
+		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/npc.c">
+			<Option target="malloc_world"/>
+		</Unit>
+		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/npc.h">
+			<Option target="malloc_world"/>
+		</Unit>
+		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/prototypes.h">
+			<Option target="malloc_world"/>
+		</Unit>
+		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/respawn.c">
+			<Option target="malloc_world"/>
+		</Unit>
+		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/respawn.h">
+			<Option target="malloc_world"/>
+		</Unit>
+		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/save.c">
+			<Option target="malloc_world"/>
+		</Unit>
+		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/save.h">
+			<Option target="malloc_world"/>
+		</Unit>
+		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/sources/structures.h">
+			<Option target="malloc_world"/>
+		</Unit>
 		<Unit filename="/Users/lin/CLionProjects/3a/malloc_world/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

@@ -6,19 +6,19 @@
 17@Vampivol@3hp@5dmg@6xp
 18@Archer vert@2hp@2dmg@7xp
 19@Maransac@2hp@3dmg@7xp
-20@Rouage-gorge@3hp@3dmg@7xp
+20@Rouage gorge@3hp@3dmg@7xp
 21@Feu follet@3hp@2dmg@7xp
 22@Esprit@2hp@2dmg@6xp
-23@Fée tide@3hp@1dmg@6xp
+23@Fee tide@3hp@1dmg@6xp
 24@Marteleur@2hp@4dmg@8xp
 25@Gluante@1hp@2dmg@8xp
 26@Champigoule@2hp@2dmg@8xp
 27@Gluanbulle@3hp@4dmg@7xp
-28@Défamphibien@3hp@2dmg@40xp
+28@Defamphibien@3hp@2dmg@40xp
 29@Frapillon@1hp@1dmg@7xp
 30@Miaougicien@3hp@2dmg@9xp
-31@Faux-frère@2hp@3dmg@8xp
-32@Gastérapaud@3hp@4dmg@9xp
+31@Faux frere@2hp@3dmg@8xp
+32@Gasterapaud@3hp@4dmg@9xp
 33@Martebrun@2hp@4dmg@8xp
 34@Blaireai bongo@3hp@2dmg@9xp
 35@Vampimage@2hp@3dmg@9xp
@@ -26,29 +26,29 @@
 37@Boucboule@4hp@5dmg@10xp
 38@Flammulus@5hp@5dmg@10xp
 39@Squelette@5hp@5dmg@10xp
-40@Médigluant@7hp@5dmg@30xp 
+40@Medigluant@7hp@5dmg@30xp 
 41@Bouclieux@7hp@5dmg@30xp
-42@Luna-tique@8hp@5dmg@30xp
-43@Gluant de métal@8hp@5dmg@30xp
-44@Machine à tuer@9hp@5dmg@35xp
+42@Luna tique@8hp@5dmg@30xp
+43@Gluant de metal@8hp@5dmg@30xp
+44@Machine a tuer@9hp@5dmg@35xp
 45@Golem@9hp@6dmg@40xp
 46@Dragon rouge@9hp@6dmg@45xp
 47@Crabsolutiste@10hp@6dmg@45xp
 48@Dracarapce@10hp@6dmg@50xp
 49@Cruirassassin@10hp@7dmg@50xp
 50@Seigneur malheur@10hp@7dmg@55xp
-51@Sacatrésor@10hp@7dmg@60xp
+51@Sacatresor@10hp@7dmg@60xp
 52@Gardien de pierre@11hp@7dmg@60xp
 53@Brumulus@11hp@8dmg@65xp
 54@Aggluandor@11hp@8dmg@70xp
 55@Imitapeur@12hp@8dmg@70xp
-56@Canniboîte@12hp@8dmg@75xp
+56@Canniboite@12hp@8dmg@75xp
 57@Glaglator@12hp@9dmg@83xp
 58@Barbatos@12hp@9dmg@85xp
 59@Draculard@13hp@9dmg@90xp
-60@Dark-en-ciel@13hp@9dmg@90xp
+60@Dark en ciel@13hp@9dmg@90xp
 61@Grand troll@14hp@8dmg@90xp
-62@Guérigluant@14hp@8dmg@95xp
+62@Guerigluant@14hp@8dmg@95xp
 63@Heaumage@18hp@10dmg@95xp
 64@Rapacepasse@18hp@10dmg@100xp
 65@Armygale@20hp@10dmg@100xp
@@ -56,33 +56,33 @@
 67@Traumasque@20hp@20dmg@100xp
 68@Octocorne@20hp@20dmg@666xp
 69@Veuve venin@20hp@30dmg@777xp
-70@Monte-gluancêtre@25hp@30dmg@888xp
-71@Roi gluant de métal@25hp@30dmg@999xp
-72@Léviathon@30hp@20dmg@1000xp
+70@Monte gluancetre@25hp@30dmg@888xp
+71@Roi gluant de metal@25hp@30dmg@999xp
+72@Leviathon@30hp@20dmg@1000xp
 73@Cumulus rex@30hp@20dmg@1000xp
-74@Carnagénie@31hp@25dmg@1000xp
-75@Chimère cosmique@32hp@25dmg@1500xp
-76@Troll à trouille@35hp@20dmg@2000xp
-77@Tempétalon@35hp@35dmg@2000xp
-78@Géolem@50hp@30dmg@2000xp
+74@Carnagenie@31hp@25dmg@1000xp
+75@Chimere cosmique@32hp@25dmg@1500xp
+76@Troll a trouille@35hp@20dmg@2000xp
+77@Tempetalon@35hp@35dmg@2000xp
+78@Geolem@50hp@30dmg@2000xp
 79@Hyporthermiasme@35hp@35dmg@2500xp
 80@Boite de Pandore@40hp@35dmg@2500xp
 81@Grrrgouille@40hp@35dmg@2500xp
-82@Glauque-mitaine@40hp@35dmg@3000xp
+82@Glauque mitaine@40hp@35dmg@3000xp
 83@Cannibelle@45hp@35dmg@3000xp
 84@Bijou royal en platine@50hp@35dmg@3000xp
-85@AU-1000@50hp@40dmg@3500xp
+85@AUmille@50hp@40dmg@3500xp
 86@Imbroglion@50hp@40dmg@3500xp
-87@Pélagosaure@50hp@40dmg@3500xp
+87@Pelagosaure@50hp@40dmg@3500xp
 88@Bhaleine@50hp@40dmg@4000xp
 89@Draculord@50hp@40dmg@4000xp
 90@Vilerequin marteau@55hp@40dmg@4500xp
-91@Mont-gluantique@55hp@40dmg@4900xp
+91@Mont gluantique@55hp@40dmg@4900xp
 92@Manguini boogie@55hp@40dmg@5000xp
 93@Laidy@55hp@40dmg@5000xp
 94@Vermillion@60hp@40dmg@5500xp
-95@Maître belzébik@65hp@40dmg@5500xp
+95@Maitre belzebik@65hp@40dmg@5500xp
 96@Oiseau de peuradis@70hp@50dmg@5678xp
 97@Scarlatin@10hp@900dmg@9999xp
 98@Rashaverak@20hp@500dmg@10000xp
-99@Gardien de l'enfer@100hp@75dmg@100000xp
+99@Gardien de l enfer@100hp@75dmg@100000xp

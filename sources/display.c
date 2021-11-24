@@ -29,7 +29,7 @@ void displayActualMap(Map* map1,Map* map2,Map* map3, int actualZone){
     }else if(actualZone == 2){
         displayMap(map2);
     }else{
-        displayMap(map2);
+        displayMap(map3);
     }
 }
 
@@ -56,11 +56,25 @@ void displayPlayer(Player *player){
     printf("--- PLAYER STATS ---\nlevel : %d\nexp :%d/%d\nhp : %d/%d\n"
            "--------------------\n",player->level,player->exps, getExpMax(player),
            player->hpNow,player->hpMax);
-    printf("--- INVENTORY ---\n");
+    printf("--------------------------------- INVENTORY --------------------------------\n");
     for( i = 0 ; i < 10 ; i++ ){
-        printf("id : %2d, quantity : x%02d, durability : %3d\n",player->inventory[i].id,
-               player->inventory[i].quantity,player->inventory[i].durability);
+        printf("id : %2d, quantity : x%02d, name : %26s, durability : %3d\n",player->inventory[i].id,
+               player->inventory[i].quantity, player->inventory[i].name, player->inventory[i].durability);
     }
+    printf("----------------------------------------------------------------------------\n");
+}
+
+void displayInventory(Player *player){
+    int i = 0;
+    printf("--------------------------------- INVENTORY --------------------------------\n");
+    for( i = 0 ; i < 10 ; i++ ){
+        if(player->inventory[i].id != 0){
+            printf(" %2d - quantity : x%02d, name : %26s, durability : %3d\n",i+1,
+                   player->inventory[i].quantity, player->inventory[i].name, player->inventory[i].durability);
+        }
+
+    }
+    printf("----------------------------------------------------------------------------\n");
 }
 
 void printLinkedList(RespawnCase* head){

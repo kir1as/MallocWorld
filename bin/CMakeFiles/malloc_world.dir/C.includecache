@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/Users/lin/CLionProjects/3a/malloc_world/main.c
+sources/prototypes.h
+/Users/lin/CLionProjects/3a/malloc_world/sources/prototypes.h
+
 /Users/lin/CLionProjects/3a/malloc_world/sources/battle.c
 stdio.h
 -
@@ -27,6 +31,14 @@ respawn.h
 /Users/lin/CLionProjects/3a/malloc_world/sources/battle.h
 
 /Users/lin/CLionProjects/3a/malloc_world/sources/define.h
+
+/Users/lin/CLionProjects/3a/malloc_world/sources/display.c
+stdio.h
+-
+stdlib.h
+-
+prototypes.h
+/Users/lin/CLionProjects/3a/malloc_world/sources/prototypes.h
 
 /Users/lin/CLionProjects/3a/malloc_world/sources/game.c
 stdio.h
@@ -54,6 +66,22 @@ save.h
 
 /Users/lin/CLionProjects/3a/malloc_world/sources/game.h
 
+/Users/lin/CLionProjects/3a/malloc_world/sources/harvest.c
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+string.h
+-
+prototypes.h
+/Users/lin/CLionProjects/3a/malloc_world/sources/prototypes.h
+respawn.h
+/Users/lin/CLionProjects/3a/malloc_world/sources/respawn.h
+npc.h
+/Users/lin/CLionProjects/3a/malloc_world/sources/npc.h
+
 /Users/lin/CLionProjects/3a/malloc_world/sources/harvest.h
 
 /Users/lin/CLionProjects/3a/malloc_world/sources/initialization.c
@@ -79,48 +107,36 @@ stdio.h
 -
 string.h
 -
+define.h
+/Users/lin/CLionProjects/3a/malloc_world/sources/define.h
 newGame.h
 /Users/lin/CLionProjects/3a/malloc_world/sources/newGame.h
 initialization.h
 /Users/lin/CLionProjects/3a/malloc_world/sources/initialization.h
-
-/Users/lin/CLionProjects/3a/malloc_world/sources/newGame.c
-stdio.h
--
-stdlib.h
--
-time.h
--
-newGame.h
-/Users/lin/CLionProjects/3a/malloc_world/sources/newGame.h
-define.h
-/Users/lin/CLionProjects/3a/malloc_world/sources/define.h
 
 /Users/lin/CLionProjects/3a/malloc_world/sources/newGame.h
 
 /Users/lin/CLionProjects/3a/malloc_world/sources/npc.c
 stdio.h
 -
+string.h
+-
+stdlib.h
+-
 prototypes.h
 /Users/lin/CLionProjects/3a/malloc_world/sources/prototypes.h
+define.h
+/Users/lin/CLionProjects/3a/malloc_world/sources/define.h
+harvest.h
+/Users/lin/CLionProjects/3a/malloc_world/sources/harvest.h
+save.h
+/Users/lin/CLionProjects/3a/malloc_world/sources/save.h
 
 /Users/lin/CLionProjects/3a/malloc_world/sources/npc.h
 
 /Users/lin/CLionProjects/3a/malloc_world/sources/prototypes.h
 structures.h
 /Users/lin/CLionProjects/3a/malloc_world/sources/structures.h
-
-/Users/lin/CLionProjects/3a/malloc_world/sources/respawn.c
-stdio.h
--
-stdlib.h
--
-structures.h
-/Users/lin/CLionProjects/3a/malloc_world/sources/structures.h
-respawn.h
-/Users/lin/CLionProjects/3a/malloc_world/sources/respawn.h
-define.h
-/Users/lin/CLionProjects/3a/malloc_world/sources/define.h
 
 /Users/lin/CLionProjects/3a/malloc_world/sources/respawn.h
 

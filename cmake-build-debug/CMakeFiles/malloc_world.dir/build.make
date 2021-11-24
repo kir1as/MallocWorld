@@ -79,17 +79,167 @@ CMakeFiles/malloc_world.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/malloc_world.dir/main.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lin/CLionProjects/3a/malloc_world/main.c -o CMakeFiles/malloc_world.dir/main.c.s
 
+CMakeFiles/malloc_world.dir/sources/game.c.o: CMakeFiles/malloc_world.dir/flags.make
+CMakeFiles/malloc_world.dir/sources/game.c.o: ../sources/game.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lin/CLionProjects/3a/malloc_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/malloc_world.dir/sources/game.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc_world.dir/sources/game.c.o -c /Users/lin/CLionProjects/3a/malloc_world/sources/game.c
+
+CMakeFiles/malloc_world.dir/sources/game.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/malloc_world.dir/sources/game.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lin/CLionProjects/3a/malloc_world/sources/game.c > CMakeFiles/malloc_world.dir/sources/game.c.i
+
+CMakeFiles/malloc_world.dir/sources/game.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/malloc_world.dir/sources/game.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lin/CLionProjects/3a/malloc_world/sources/game.c -o CMakeFiles/malloc_world.dir/sources/game.c.s
+
+CMakeFiles/malloc_world.dir/sources/initialization.c.o: CMakeFiles/malloc_world.dir/flags.make
+CMakeFiles/malloc_world.dir/sources/initialization.c.o: ../sources/initialization.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lin/CLionProjects/3a/malloc_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/malloc_world.dir/sources/initialization.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc_world.dir/sources/initialization.c.o -c /Users/lin/CLionProjects/3a/malloc_world/sources/initialization.c
+
+CMakeFiles/malloc_world.dir/sources/initialization.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/malloc_world.dir/sources/initialization.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lin/CLionProjects/3a/malloc_world/sources/initialization.c > CMakeFiles/malloc_world.dir/sources/initialization.c.i
+
+CMakeFiles/malloc_world.dir/sources/initialization.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/malloc_world.dir/sources/initialization.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lin/CLionProjects/3a/malloc_world/sources/initialization.c -o CMakeFiles/malloc_world.dir/sources/initialization.c.s
+
+CMakeFiles/malloc_world.dir/sources/menu.c.o: CMakeFiles/malloc_world.dir/flags.make
+CMakeFiles/malloc_world.dir/sources/menu.c.o: ../sources/menu.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lin/CLionProjects/3a/malloc_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/malloc_world.dir/sources/menu.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc_world.dir/sources/menu.c.o -c /Users/lin/CLionProjects/3a/malloc_world/sources/menu.c
+
+CMakeFiles/malloc_world.dir/sources/menu.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/malloc_world.dir/sources/menu.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lin/CLionProjects/3a/malloc_world/sources/menu.c > CMakeFiles/malloc_world.dir/sources/menu.c.i
+
+CMakeFiles/malloc_world.dir/sources/menu.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/malloc_world.dir/sources/menu.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lin/CLionProjects/3a/malloc_world/sources/menu.c -o CMakeFiles/malloc_world.dir/sources/menu.c.s
+
+CMakeFiles/malloc_world.dir/sources/newGame.c.o: CMakeFiles/malloc_world.dir/flags.make
+CMakeFiles/malloc_world.dir/sources/newGame.c.o: ../sources/newGame.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lin/CLionProjects/3a/malloc_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/malloc_world.dir/sources/newGame.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc_world.dir/sources/newGame.c.o -c /Users/lin/CLionProjects/3a/malloc_world/sources/newGame.c
+
+CMakeFiles/malloc_world.dir/sources/newGame.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/malloc_world.dir/sources/newGame.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lin/CLionProjects/3a/malloc_world/sources/newGame.c > CMakeFiles/malloc_world.dir/sources/newGame.c.i
+
+CMakeFiles/malloc_world.dir/sources/newGame.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/malloc_world.dir/sources/newGame.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lin/CLionProjects/3a/malloc_world/sources/newGame.c -o CMakeFiles/malloc_world.dir/sources/newGame.c.s
+
+CMakeFiles/malloc_world.dir/sources/display.c.o: CMakeFiles/malloc_world.dir/flags.make
+CMakeFiles/malloc_world.dir/sources/display.c.o: ../sources/display.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lin/CLionProjects/3a/malloc_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/malloc_world.dir/sources/display.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc_world.dir/sources/display.c.o -c /Users/lin/CLionProjects/3a/malloc_world/sources/display.c
+
+CMakeFiles/malloc_world.dir/sources/display.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/malloc_world.dir/sources/display.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lin/CLionProjects/3a/malloc_world/sources/display.c > CMakeFiles/malloc_world.dir/sources/display.c.i
+
+CMakeFiles/malloc_world.dir/sources/display.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/malloc_world.dir/sources/display.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lin/CLionProjects/3a/malloc_world/sources/display.c -o CMakeFiles/malloc_world.dir/sources/display.c.s
+
+CMakeFiles/malloc_world.dir/sources/npc.c.o: CMakeFiles/malloc_world.dir/flags.make
+CMakeFiles/malloc_world.dir/sources/npc.c.o: ../sources/npc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lin/CLionProjects/3a/malloc_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/malloc_world.dir/sources/npc.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc_world.dir/sources/npc.c.o -c /Users/lin/CLionProjects/3a/malloc_world/sources/npc.c
+
+CMakeFiles/malloc_world.dir/sources/npc.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/malloc_world.dir/sources/npc.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lin/CLionProjects/3a/malloc_world/sources/npc.c > CMakeFiles/malloc_world.dir/sources/npc.c.i
+
+CMakeFiles/malloc_world.dir/sources/npc.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/malloc_world.dir/sources/npc.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lin/CLionProjects/3a/malloc_world/sources/npc.c -o CMakeFiles/malloc_world.dir/sources/npc.c.s
+
+CMakeFiles/malloc_world.dir/sources/respawn.c.o: CMakeFiles/malloc_world.dir/flags.make
+CMakeFiles/malloc_world.dir/sources/respawn.c.o: ../sources/respawn.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lin/CLionProjects/3a/malloc_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/malloc_world.dir/sources/respawn.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc_world.dir/sources/respawn.c.o -c /Users/lin/CLionProjects/3a/malloc_world/sources/respawn.c
+
+CMakeFiles/malloc_world.dir/sources/respawn.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/malloc_world.dir/sources/respawn.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lin/CLionProjects/3a/malloc_world/sources/respawn.c > CMakeFiles/malloc_world.dir/sources/respawn.c.i
+
+CMakeFiles/malloc_world.dir/sources/respawn.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/malloc_world.dir/sources/respawn.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lin/CLionProjects/3a/malloc_world/sources/respawn.c -o CMakeFiles/malloc_world.dir/sources/respawn.c.s
+
+CMakeFiles/malloc_world.dir/sources/harvest.c.o: CMakeFiles/malloc_world.dir/flags.make
+CMakeFiles/malloc_world.dir/sources/harvest.c.o: ../sources/harvest.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lin/CLionProjects/3a/malloc_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/malloc_world.dir/sources/harvest.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc_world.dir/sources/harvest.c.o -c /Users/lin/CLionProjects/3a/malloc_world/sources/harvest.c
+
+CMakeFiles/malloc_world.dir/sources/harvest.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/malloc_world.dir/sources/harvest.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lin/CLionProjects/3a/malloc_world/sources/harvest.c > CMakeFiles/malloc_world.dir/sources/harvest.c.i
+
+CMakeFiles/malloc_world.dir/sources/harvest.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/malloc_world.dir/sources/harvest.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lin/CLionProjects/3a/malloc_world/sources/harvest.c -o CMakeFiles/malloc_world.dir/sources/harvest.c.s
+
+CMakeFiles/malloc_world.dir/sources/battle.c.o: CMakeFiles/malloc_world.dir/flags.make
+CMakeFiles/malloc_world.dir/sources/battle.c.o: ../sources/battle.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lin/CLionProjects/3a/malloc_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/malloc_world.dir/sources/battle.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc_world.dir/sources/battle.c.o -c /Users/lin/CLionProjects/3a/malloc_world/sources/battle.c
+
+CMakeFiles/malloc_world.dir/sources/battle.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/malloc_world.dir/sources/battle.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lin/CLionProjects/3a/malloc_world/sources/battle.c > CMakeFiles/malloc_world.dir/sources/battle.c.i
+
+CMakeFiles/malloc_world.dir/sources/battle.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/malloc_world.dir/sources/battle.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lin/CLionProjects/3a/malloc_world/sources/battle.c -o CMakeFiles/malloc_world.dir/sources/battle.c.s
+
+CMakeFiles/malloc_world.dir/sources/save.c.o: CMakeFiles/malloc_world.dir/flags.make
+CMakeFiles/malloc_world.dir/sources/save.c.o: ../sources/save.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lin/CLionProjects/3a/malloc_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/malloc_world.dir/sources/save.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc_world.dir/sources/save.c.o -c /Users/lin/CLionProjects/3a/malloc_world/sources/save.c
+
+CMakeFiles/malloc_world.dir/sources/save.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/malloc_world.dir/sources/save.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lin/CLionProjects/3a/malloc_world/sources/save.c > CMakeFiles/malloc_world.dir/sources/save.c.i
+
+CMakeFiles/malloc_world.dir/sources/save.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/malloc_world.dir/sources/save.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lin/CLionProjects/3a/malloc_world/sources/save.c -o CMakeFiles/malloc_world.dir/sources/save.c.s
+
 # Object files for target malloc_world
 malloc_world_OBJECTS = \
-"CMakeFiles/malloc_world.dir/main.c.o"
+"CMakeFiles/malloc_world.dir/main.c.o" \
+"CMakeFiles/malloc_world.dir/sources/game.c.o" \
+"CMakeFiles/malloc_world.dir/sources/initialization.c.o" \
+"CMakeFiles/malloc_world.dir/sources/menu.c.o" \
+"CMakeFiles/malloc_world.dir/sources/newGame.c.o" \
+"CMakeFiles/malloc_world.dir/sources/display.c.o" \
+"CMakeFiles/malloc_world.dir/sources/npc.c.o" \
+"CMakeFiles/malloc_world.dir/sources/respawn.c.o" \
+"CMakeFiles/malloc_world.dir/sources/harvest.c.o" \
+"CMakeFiles/malloc_world.dir/sources/battle.c.o" \
+"CMakeFiles/malloc_world.dir/sources/save.c.o"
 
 # External object files for target malloc_world
 malloc_world_EXTERNAL_OBJECTS =
 
 malloc_world: CMakeFiles/malloc_world.dir/main.c.o
+malloc_world: CMakeFiles/malloc_world.dir/sources/game.c.o
+malloc_world: CMakeFiles/malloc_world.dir/sources/initialization.c.o
+malloc_world: CMakeFiles/malloc_world.dir/sources/menu.c.o
+malloc_world: CMakeFiles/malloc_world.dir/sources/newGame.c.o
+malloc_world: CMakeFiles/malloc_world.dir/sources/display.c.o
+malloc_world: CMakeFiles/malloc_world.dir/sources/npc.c.o
+malloc_world: CMakeFiles/malloc_world.dir/sources/respawn.c.o
+malloc_world: CMakeFiles/malloc_world.dir/sources/harvest.c.o
+malloc_world: CMakeFiles/malloc_world.dir/sources/battle.c.o
+malloc_world: CMakeFiles/malloc_world.dir/sources/save.c.o
 malloc_world: CMakeFiles/malloc_world.dir/build.make
 malloc_world: CMakeFiles/malloc_world.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lin/CLionProjects/3a/malloc_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable malloc_world"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lin/CLionProjects/3a/malloc_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking C executable malloc_world"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/malloc_world.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -13,6 +13,8 @@ int valueToHarvestItemId(int value);
 int itemHarvested(int value);
 //Permet de verifier s'il y a de la place dans l'inventaire et si l'objet peut etre stack
 int verifyInventorySpace(Player* player, int value, int harvestQuantity);
+//Permet de verifier si il y a une case vide dans l'inventaire
+int verifyUniqueInventorySpace(Player* player);
 //Permet de verifier si l'outil se trouve dans l'inventaire par rapport a ce qu'on veut recolter
 //ainsi que sa durabilité
 int verifyHarvestItem(Player* player, int value, int minDurability);

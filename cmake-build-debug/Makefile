@@ -56,7 +56,7 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 # Escaping for special characters.
 EQUALS = =
 
-# The top-level sources directory on which CMake was run.
+# The top-level source directory on which CMake was run.
 CMAKE_SOURCE_DIR = /Users/lin/CLionProjects/3a/malloc_world
 
 # The top-level build directory on which CMake was run.
@@ -140,7 +140,7 @@ main.c.o:
 main.i: main.c.i
 .PHONY : main.i
 
-# target to preprocess a sources file
+# target to preprocess a source file
 main.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/main.c.i
 .PHONY : main.c.i
@@ -152,6 +152,246 @@ main.s: main.c.s
 main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/main.c.s
 .PHONY : main.c.s
+
+sources/battle.o: sources/battle.c.o
+.PHONY : sources/battle.o
+
+# target to build an object file
+sources/battle.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/battle.c.o
+.PHONY : sources/battle.c.o
+
+sources/battle.i: sources/battle.c.i
+.PHONY : sources/battle.i
+
+# target to preprocess a source file
+sources/battle.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/battle.c.i
+.PHONY : sources/battle.c.i
+
+sources/battle.s: sources/battle.c.s
+.PHONY : sources/battle.s
+
+# target to generate assembly for a file
+sources/battle.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/battle.c.s
+.PHONY : sources/battle.c.s
+
+sources/display.o: sources/display.c.o
+.PHONY : sources/display.o
+
+# target to build an object file
+sources/display.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/display.c.o
+.PHONY : sources/display.c.o
+
+sources/display.i: sources/display.c.i
+.PHONY : sources/display.i
+
+# target to preprocess a source file
+sources/display.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/display.c.i
+.PHONY : sources/display.c.i
+
+sources/display.s: sources/display.c.s
+.PHONY : sources/display.s
+
+# target to generate assembly for a file
+sources/display.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/display.c.s
+.PHONY : sources/display.c.s
+
+sources/game.o: sources/game.c.o
+.PHONY : sources/game.o
+
+# target to build an object file
+sources/game.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/game.c.o
+.PHONY : sources/game.c.o
+
+sources/game.i: sources/game.c.i
+.PHONY : sources/game.i
+
+# target to preprocess a source file
+sources/game.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/game.c.i
+.PHONY : sources/game.c.i
+
+sources/game.s: sources/game.c.s
+.PHONY : sources/game.s
+
+# target to generate assembly for a file
+sources/game.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/game.c.s
+.PHONY : sources/game.c.s
+
+sources/harvest.o: sources/harvest.c.o
+.PHONY : sources/harvest.o
+
+# target to build an object file
+sources/harvest.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/harvest.c.o
+.PHONY : sources/harvest.c.o
+
+sources/harvest.i: sources/harvest.c.i
+.PHONY : sources/harvest.i
+
+# target to preprocess a source file
+sources/harvest.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/harvest.c.i
+.PHONY : sources/harvest.c.i
+
+sources/harvest.s: sources/harvest.c.s
+.PHONY : sources/harvest.s
+
+# target to generate assembly for a file
+sources/harvest.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/harvest.c.s
+.PHONY : sources/harvest.c.s
+
+sources/initialization.o: sources/initialization.c.o
+.PHONY : sources/initialization.o
+
+# target to build an object file
+sources/initialization.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/initialization.c.o
+.PHONY : sources/initialization.c.o
+
+sources/initialization.i: sources/initialization.c.i
+.PHONY : sources/initialization.i
+
+# target to preprocess a source file
+sources/initialization.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/initialization.c.i
+.PHONY : sources/initialization.c.i
+
+sources/initialization.s: sources/initialization.c.s
+.PHONY : sources/initialization.s
+
+# target to generate assembly for a file
+sources/initialization.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/initialization.c.s
+.PHONY : sources/initialization.c.s
+
+sources/menu.o: sources/menu.c.o
+.PHONY : sources/menu.o
+
+# target to build an object file
+sources/menu.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/menu.c.o
+.PHONY : sources/menu.c.o
+
+sources/menu.i: sources/menu.c.i
+.PHONY : sources/menu.i
+
+# target to preprocess a source file
+sources/menu.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/menu.c.i
+.PHONY : sources/menu.c.i
+
+sources/menu.s: sources/menu.c.s
+.PHONY : sources/menu.s
+
+# target to generate assembly for a file
+sources/menu.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/menu.c.s
+.PHONY : sources/menu.c.s
+
+sources/newGame.o: sources/newGame.c.o
+.PHONY : sources/newGame.o
+
+# target to build an object file
+sources/newGame.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/newGame.c.o
+.PHONY : sources/newGame.c.o
+
+sources/newGame.i: sources/newGame.c.i
+.PHONY : sources/newGame.i
+
+# target to preprocess a source file
+sources/newGame.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/newGame.c.i
+.PHONY : sources/newGame.c.i
+
+sources/newGame.s: sources/newGame.c.s
+.PHONY : sources/newGame.s
+
+# target to generate assembly for a file
+sources/newGame.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/newGame.c.s
+.PHONY : sources/newGame.c.s
+
+sources/npc.o: sources/npc.c.o
+.PHONY : sources/npc.o
+
+# target to build an object file
+sources/npc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/npc.c.o
+.PHONY : sources/npc.c.o
+
+sources/npc.i: sources/npc.c.i
+.PHONY : sources/npc.i
+
+# target to preprocess a source file
+sources/npc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/npc.c.i
+.PHONY : sources/npc.c.i
+
+sources/npc.s: sources/npc.c.s
+.PHONY : sources/npc.s
+
+# target to generate assembly for a file
+sources/npc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/npc.c.s
+.PHONY : sources/npc.c.s
+
+sources/respawn.o: sources/respawn.c.o
+.PHONY : sources/respawn.o
+
+# target to build an object file
+sources/respawn.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/respawn.c.o
+.PHONY : sources/respawn.c.o
+
+sources/respawn.i: sources/respawn.c.i
+.PHONY : sources/respawn.i
+
+# target to preprocess a source file
+sources/respawn.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/respawn.c.i
+.PHONY : sources/respawn.c.i
+
+sources/respawn.s: sources/respawn.c.s
+.PHONY : sources/respawn.s
+
+# target to generate assembly for a file
+sources/respawn.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/respawn.c.s
+.PHONY : sources/respawn.c.s
+
+sources/save.o: sources/save.c.o
+.PHONY : sources/save.o
+
+# target to build an object file
+sources/save.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/save.c.o
+.PHONY : sources/save.c.o
+
+sources/save.i: sources/save.c.i
+.PHONY : sources/save.i
+
+# target to preprocess a source file
+sources/save.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/save.c.i
+.PHONY : sources/save.c.i
+
+sources/save.s: sources/save.c.s
+.PHONY : sources/save.s
+
+# target to generate assembly for a file
+sources/save.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/malloc_world.dir/build.make CMakeFiles/malloc_world.dir/sources/save.c.s
+.PHONY : sources/save.c.s
 
 # Help Target
 help:
@@ -165,6 +405,36 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... sources/battle.o"
+	@echo "... sources/battle.i"
+	@echo "... sources/battle.s"
+	@echo "... sources/display.o"
+	@echo "... sources/display.i"
+	@echo "... sources/display.s"
+	@echo "... sources/game.o"
+	@echo "... sources/game.i"
+	@echo "... sources/game.s"
+	@echo "... sources/harvest.o"
+	@echo "... sources/harvest.i"
+	@echo "... sources/harvest.s"
+	@echo "... sources/initialization.o"
+	@echo "... sources/initialization.i"
+	@echo "... sources/initialization.s"
+	@echo "... sources/menu.o"
+	@echo "... sources/menu.i"
+	@echo "... sources/menu.s"
+	@echo "... sources/newGame.o"
+	@echo "... sources/newGame.i"
+	@echo "... sources/newGame.s"
+	@echo "... sources/npc.o"
+	@echo "... sources/npc.i"
+	@echo "... sources/npc.s"
+	@echo "... sources/respawn.o"
+	@echo "... sources/respawn.i"
+	@echo "... sources/respawn.s"
+	@echo "... sources/save.o"
+	@echo "... sources/save.i"
+	@echo "... sources/save.s"
 .PHONY : help
 
 

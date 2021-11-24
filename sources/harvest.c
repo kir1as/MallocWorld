@@ -5,8 +5,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "structures.h"
+#include <string.h>
+#include "prototypes.h"
 #include "respawn.h"
+#include "npc.h"
 
 int valueToHarvestItemId(int value){
     switch(value){
@@ -51,6 +53,19 @@ int verifyInventorySpace(Player* player, int value, int harvestQuantity){
     return 0;
 }
 
+int verifyUniqueInventorySpace(Player* player){
+    int i = 0;
+    int counter = 0;
+    for( i = 0 ; i < 10 ; i++){
+        if(player->inventory[i].id == 0){
+            counter++;
+        }
+    }
+    if(counter != 0){
+        return 1;
+    }
+    return 0;
+}
 
 int verifyHarvestItem(Player* player, int value, int minDurability){
     int i = 0;
@@ -82,6 +97,7 @@ void stockHarvestedItem(Player* player, int harvestQuantity, int value){
     for( i = 0 ; i < 10 ; i++ ){
         if(player->inventory[i].id == value && (player->inventory[i].quantity+harvestQuantity) <= 20){
             player->inventory[i].quantity += harvestQuantity;
+            printf("ajout a l'inventaire reussi!\n");
             return;
         }
     }
@@ -90,7 +106,9 @@ void stockHarvestedItem(Player* player, int harvestQuantity, int value){
         if(player->inventory[i].id == 0){
             player->inventory[i].id = value;
             player->inventory[i].quantity = harvestQuantity;
-            player->inventory[i].durability = 0;
+            player->inventory[i].durability = getDurability(value);
+            strcpy(player->inventory[i].name,value<=20?getNameFromObjectID1(value):getNameFromObjectID2(value));
+            printf("ajout a l'inventaire reussi!\n");
             return;
         }
     }

@@ -13,3 +13,5 @@ int getDurability(int id);
 void repairEquipment(Player* player);
 //Permet l'affichage du menu du PNG
 void npcMenu(Player* player);
+//Permet d'ajouter un item dans l'inventaire
+void appendItemInventory(Player* player, int harvestQuantity, int value);

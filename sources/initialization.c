@@ -103,6 +103,7 @@ void retrievePlayer(Player *player){
     char line[255];
     char c = 'a';
     int i = 0;
+    int id = 0;
     FILE *fp = fopen(SAVE_FILE_PATHNAME,"r+");
     if(fp == NULL){
         printf("fichier de sauvegarde introuvable\n");
@@ -126,7 +127,9 @@ void retrievePlayer(Player *player){
                 }
                 player->inventory[i].quantity = atoi(strtok(line,"@")+1);
                 player->inventory[i].id = atoi(strtok(NULL,"@")+1);
+                id = player->inventory[i].id;
                 player->inventory[i].durability = atoi(strtok(NULL,"@")+1);
+                strcpy(player->inventory[i].name,id<=20?getNameFromObjectID1(id):getNameFromObjectID2(id));
             }
 
         }

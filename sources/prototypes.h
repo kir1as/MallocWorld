@@ -27,3 +27,12 @@ int getExpMax(Player *player);
 void errorLog(const char* txt);
 //Permet de clear l'ecran du terminal
 void clear_screen(void);
+//Permet d'afficher l'inventaire du joueur
+void displayInventory(Player *player);
+//Permet de recuperer les noms des items a partir d'un id
+char* getNameFromObjectID1(int id);
+char* getNameFromObjectID2(int id);
+//Permet d'afficher le coffre
+int displayStorage(void);
+//Permet de savoir si oui ou non l'item est stackable a partir d un id
+int getStackableResources(int id);
