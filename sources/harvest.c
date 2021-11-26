@@ -69,10 +69,24 @@ int verifyUniqueInventorySpace(Player* player){
 
 int verifyHarvestItem(Player* player, int value, int minDurability){
     int i = 0;
+    int j = 0;
+    int counter = 0;
+    int tmp = valueToHarvestItemId(value);
+    if(value >= 9){
+        counter = 1;
+    }else if(value >= 6){
+        counter = 2;
+    }else{
+        counter = 3;
+    }
     for( i = 0 ; i < 10 ; i++ ) {
-        if(player->inventory[i].id == value && player->inventory[i].durability >= minDurability){
-            player->inventory[i].durability -= minDurability;
-            return 1;
+        tmp = valueToHarvestItemId(value);
+        for( j = 0 ; j < counter ; j++) {
+            if(player->inventory[i].id == tmp && player->inventory[i].durability >= minDurability){
+                player->inventory[i].durability -= minDurability;
+                return 1;
+            }
+            tmp = valueToHarvestItemId(value+(3*(j+1)));
         }
     }
     return 0;
@@ -129,7 +143,7 @@ void harvest(Map* map, Player* player, ListRespawnCase* list, int value, int upD
     }
 
     if(verifyInventorySpace(player, itemHarvested(value), harvestQuantity) == 1){
-        if(verifyHarvestItem(player, valueToHarvestItemId(value), minDurability) == 1){
+        if(verifyHarvestItem(player, value, minDurability) == 1){
             harvestedCase(list, map, upDown, leftRight, value);
             stockHarvestedItem(player, harvestQuantity,itemHarvested(value));
         }else{

@@ -4,9 +4,23 @@
 // Created by William Lin on 18/10/2021.
 //
 
+#include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include "prototypes.h"
+
+void chdirForMacUser(char *array){
+    int i = 0;
+    while(array[i] !=  '\0'){
+        i++;
+    }
+    while(array[i] != '/'){
+        array[i]=' ';
+        i--;
+    }
+    array[i]='\0';
+    chdir(array);
+}
 
 void clear_screen(void){
     system("clear||clr");

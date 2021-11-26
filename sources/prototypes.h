@@ -36,3 +36,5 @@ char* getNameFromObjectID2(int id);
 int displayStorage(void);
 //Permet de savoir si oui ou non l'item est stackable a partir d un id
 int getStackableResources(int id);
+//Permet de double click sur l'exec sur mac
+void chdirForMacUser(char *array);

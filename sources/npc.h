@@ -15,3 +15,15 @@ void repairEquipment(Player* player);
 void npcMenu(Player* player);
 //Permet d'ajouter un item dans l'inventaire
 void appendItemInventory(Player* player, int harvestQuantity, int value);
+//Permet de recuperer un item du coffre
+void withdrawItemFromStorage(Player* player, int idWithdraw);
+//menu de la fonctionnalite de recuperer un item du coffre
+void withdrawItem(Player* player);
+//Permet d'ajouter un item dans le coffre
+void appendItemInStorage(Player* player,int i);
+//Permet d'ajouter une ressource dans le coffre
+void appendResourceInStorage(Player* player,int i);
+//menu de la fonctionnalite de deposer un item du coffre
+void depositItem(Player* player);
+//menu de la fonctionnalite de storage du png
+void storage(Player* player);
