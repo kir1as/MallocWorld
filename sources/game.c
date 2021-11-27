@@ -328,15 +328,15 @@ int getAction(Map* map, ListRespawnCase* list, int value, int upDown,int leftRig
         harvest(map, player, list, value, upDown, leftRight);//Code du Minage de pierre
     }else if(value == 5 || value == 8 || value == 11){
         harvest(map, player, list, value, upDown, leftRight);//Code du recolte de bois
-    }else if(value >= 12 && value <= 98){
+    }else if(value >= 12 && value <= 99){
         battleValue = battle(player, value);
-        if(battleValue == 1){
+        if(battleValue == 1 && value != 99){
             monsterCase(list, map, upDown, leftRight, value);
+        }else if(battleValue == 1){
+            return 7;
         }else if(battleValue == -1){
             return -1;
         };//Code de combat
-    }else if(value == 99){
-        //Code du combat contre le boss
     }
     return 0;
 }
@@ -349,6 +349,17 @@ Map* getActualMap(Map* map1, Map* map2, Map* map3, int actualZone){
     }else{
         return map3;
     }
+}
+
+void gameEndCredit(void){
+    printf("THE END\n Vous avez secourue Malloc World de l'invasion en battant "
+           "le terrible Gardien de l'enfer!\n Ainsi le monde se rétablie paisiblement,\n"
+           " il vous reste plus qu'a vivre avec le coeur leger,\n tout en combattant"
+           "les dernier monstres survivant ...\n");
+    printf("Developpeur -> WILLIAM LIN\n");
+    printf("Developpeur -> BASTIEN PAILLOUX\n");
+    printf("Enseignant -> MR.BRIATTE\n");
+    printf("\nMERCI D'AVOIR JOUER AU JEU !\n");
 }
 
 int game(Map* map1,Map* map2,Map* map3, Player* player){
@@ -396,6 +407,9 @@ int game(Map* map1,Map* map2,Map* map3, Player* player){
         }
         if(getActionValue == -1){
             return -1;
+        }
+        if(getActionValue == 7){
+            gameEndCredit();
         }
         if(swapZone != 0){
             shiftZone(&actualZone, &swapZone, map1, map2, map3, upDown, leftRight ,list);

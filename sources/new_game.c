@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "newGame.h"
+#include "new_game.h"
 #include "define.h"
 
 int randomMonster(int zone){
@@ -50,15 +50,15 @@ void generateMap(int zone,int map[][10]){
                     counterMonster -= 1;
                     turn = 1;
                 }else if(randNb == 2 && counterPlant != 0){
-                    map[i][j] = 3 + zone - 1;
+                    map[i][j] = 3 + (zone - 1) * 3;
                     counterPlant -= 1;
                     turn = 1;
                 }else if(randNb == 3 && counterStone != 0){
-                    map[i][j] = 4 + zone -1;
+                    map[i][j] = 4 + (zone - 1) * 3;
                     counterStone -= 1;
                     turn = 1;
                 }else if(randNb == 4 && counterTree != 0){
-                    map[i][j] = 5 + zone - 1;
+                    map[i][j] = 5 + (zone - 1) * 3;
                     counterTree -= 1;
                     turn = 1;
                 }
@@ -111,7 +111,8 @@ void putBoss(int map[][10]){
     int j = 0 ;
     for( i = 1 ; i < 10-1 ; i++ ){
         for( j = 1 ; j < 10-1 ; j++ ){
-            if(map[i][j] == 0 && map[i][j+1] != -1 && map[i+1][j] != -1 && map[i-1][j] != -1 && map[i][j-1] != -1){
+            if(map[i][j] == 0 && map[i][j+1] == 0  && map[i+1][j] == 0 &&
+            map[i-1][j] == 0 && map[i][j-1] == 0){
                 map[i][j] = 99;
                 return;
             }

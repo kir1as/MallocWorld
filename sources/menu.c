@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "define.h"
-#include "newGame.h"
+#include "new_game.h"
 #include "initialization.h"
 
 void getMenu(void){
